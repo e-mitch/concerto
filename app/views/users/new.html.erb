@@ -1,20 +1,14 @@
-<h1>
-  New User
-  
-
-<%= form_with scope: :user, url: users_path, local: true do |form| %>
-  <p>
-    <%= form.label :first_name %><br>
-    <%= form.text_field :fname %>
-  </p>
- 
-  <p>
-    <%= form.label :last_name %><br>
-    <%= form.text_area :lname %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-</h1>
+<h1>Sign Up</h1>
+<%= form_with scope: :user, url: users_path, local: true do |f|%>
+  <%= f.label :fname%> 
+  <%= f.text_field :fname%>
+  <%= f.label :lname%> 
+  <%= f.text_field :lname%>
+  <%= f.label :email%> 
+  <%= f.text_field :email%>
+  <%= f.label :username%><br>
+  <%= f.text_field :username%><br>
+  <%= f.label :password%><br>
+  <%= f.password_field :password%><br>
+  <%= f.submit %>
+<%end%>
